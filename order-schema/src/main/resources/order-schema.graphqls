@@ -1,0 +1,23 @@
+type Query{
+	getAllOrders: [Order]
+	getOrderById(id:String!): Order
+}
+
+type Order{
+	id:String
+	custId:String
+	customer:Customer
+	product:Product
+}
+
+type Customer{
+	id:String
+	email:String
+	password:String
+}
+
+type Product{
+	id:String
+	name:String
+	price:Int
+}
